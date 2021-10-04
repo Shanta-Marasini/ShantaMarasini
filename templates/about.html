@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% block title%} About {% endblock %}
+
+{% block main %}
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="my-photo-div">
+            {% load static %}
+            <img src="{% static 'media/photo.jpg' %}" class=" my-photo" alt=" My photo">
+            </div>
+            <div class="social-div">
+                <a href="https://github.com/Shanta-Marasini" class="social-links" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span class="social-text"> Github </span>
+                </a>
+                <a href=" https://www.linkedin.com/in/shanta-marasini/" class="social-links" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="social-text"> Linkedin </span>
+                </a>
+                <a href=" {% url 'contact' %}" class="social-links">
+                    <i class="fas fa-envelope"></i>
+                    <span class="social-text"> Email </span>
+                </a>
+                <a href=" https://shanta-marasini.github.io/" class="social-links" target="_blank">
+                    <i class="fas fa-browser"></i>
+                    <span class="social-text"> Website </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-sm-8">
+
+            <h1> Hello World!!! <span class="my-name"> Shanta Marasini Here </span> </h1>
+            <h3>Python Developer, AI Enthusiast</h3>
+
+            <p>
+                I am into tech because I want many mundane, repetitive, complex things in my life to be
+                automated so that I can spare myself time to do the things that I love.
+                That's what keeps me attracted towards problem solving and automating through coding.
+            </p>
+            <p>
+                I am a python developer. I have some related repositories in my github account.
+                I am also interested in Machine Learning so I am in the process of learning tech stack for it.
+            </p>
+
+        </div>
+    </div>
+
+<!--    Second row github and blogs -->
+     <div class="row">
+        <div class="col-md-6 about-section">
+            <div class="card" >
+                <div class="card-body">
+                    <h3 class="card-title"> Life as a Coder </h3>
+                    <h6 class="card-subtitle mb-4 text-muted">
+                        Nothing can bother me as much as errors do.</h6>
+                    <p class="card-text mb-5">
+                        I have been working on web designing (HTML, CSS, JavaScript) since 2 years and python (Django) since last year.
+                        I have built some simple, basic projects, but do not have any professional experience.
+                        I have some basic knowledge of databases and Github.
+                        I aspire to focus on database and backend development.
+                        I regularly keep on updating my github.
+                    </p>
+
+                    <a href="{% url 'github' %}" class="card-link">
+                        <i class="fab fa-github"></i>
+                        Github Page </a>
+                </div>
+            </div>
+<!--            card end-->
+        </div>
+
+        <div class="col-md-6 about-section">
+            <div class="card" >
+                <div class="card-body">
+                    <h3 class="card-title"> I love writing </h3>
+                    <h6 class="card-subtitle mb-4 text-muted">
+                        What is said flies in the air so I believe in framing words.</h6>
+                    <p class="card-text mb-5">
+                        I am into free writing and keep my journals.
+
+                        So I write whenever I am struck wih some realizations and also if I am
+                        stuck in some emotions or problems.
+                        Writing has helped me to express myself clearly and also has brought clarity to my thoughts.
+                        It has helped me in solving ongoing mental debates and also to generate new ideas.
+
+                    </p>
+                    <a href="{% url 'posts' %}" class="card-link">
+                        <i class="fas fa-journal-whills"></i>  Lets see my Blogs
+                    </a>
+
+                </div>
+            </div>
+<!--            card end-->
+        </div>
+    </div>
+
+<!--third row interests and books-->
+    <div class="row">
+        <div class="col-md-6 about-section">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Different dimensions of life</h3>
+                    <h6 class="card-subtitle mb-4 text-muted">
+                        There are no rigid ways to live life.</h6>
+                    <p class="card-text">
+                        I believe in being agile and dynamic, remaining static is not my cup of tea.
+                        That's why I keep on exploring different dimensions of the life.
+                        Along with coding I am interested in and take part in a lot of other aspects.
+                        I believe in being a fully productive human who doesnot compromise in doing
+                        right things at the right time.
+                        No matter what I try making time for what I love.
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Travelling and adventure</li>
+                    <li class="list-group-item">Sketching and painting</li>
+                    <li class="list-group-item">Reading self-improvement books</li>
+                    <li class="list-group-item">Volunteering and social servicing</li>
+
+                </ul>
+            </div>
+<!--            card end-->
+        </div>
+
+        <div class="col-md-6 about-section">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Itinerary of Books</h3>
+                    <h6 class="card-subtitle mb-4 text-muted"> Books give us advices </h6>
+                    <p class="card-text">
+                       Reading self-improvement books has hugely shaped my life.
+                        They have helped me transform from a careless person to a goal-oriented person,
+                        from a problem-dweller to a solution-seeker.
+                        I try to take out some time everyday to read books.
+                        Some books that I have been through are:
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Inner Ingineering </li>
+                    <li class="list-group-item">The Alchemist </li>
+                    <li class="list-group-item">The Power of your Subconscious Mind</li>
+                    <li class="list-group-item">Think and Grow Rich</li>
+                    <li class="list-group-item">The Monk who Sold his Ferrari, and the list goes on...</li>
+                </ul>
+            </div>
+<!--            card end-->
+
+        </div>
+    </div>
+
+{% endblock %}

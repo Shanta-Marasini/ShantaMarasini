@@ -1,0 +1,50 @@
+my-photo-div{
+
+}
+.my-photo{
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #CC75F5;
+    box-shadow: 0px 0px 11px #C04FF5;
+}
+.social-div{
+    padding:30px;
+}
+.social-links{
+    display:block;
+    text-decoration: none;
+    color:#400061;
+}
+.social-links:hover{
+    text-decoration: none;
+    color:black;
+}
+.my-name{
+    color: #CC75F5;
+}
+.about-section{
+    padding: 20px;
+
+}
+.card{
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #C04FF5;
+}
+.card-title{
+    color: #400061;
+}
+.card-link{
+    color:#400061;
+    border: 1px solid #CC75F5;
+    padding:8px 16px;
+    border-radius: 5px;
+
+}
+.card-link:hover{
+    color: white;
+    background: #CC75F5;
+}
+
+@media only screen and (max-width: 1000px) {
+
+}

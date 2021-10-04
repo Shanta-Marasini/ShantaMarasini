@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title%} Blogs {% endblock %}
+
+{% block main %}
+
+<div class="card mb-3" >
+    <div class="card-body">
+        <h3 class="card-title"> I love writing </h3>
+        <h6 class="card-subtitle mb-4 text-muted"> What is said flies in the air I believe in framing words.</h6>
+        <p class="card-text mb-5">
+            I am into free writing and keep my journals.
+
+            So I write whenever I am struck wih some realizations and also if I am
+            stuck in some emotions or problems.
+            Writing has helped me to express myself clearly and also has brought clarity to my thoughts.
+            It has helped me in solving ongoing mental debates and also to generate new ideas.
+        </p>
+    </div>
+</div>
+
+<div class="all-blogs">
+        <div class="row">
+            {% for post in posts %}
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <a href="{% url 'post_detail' post.id %}" class="card-title-link">{{ post.title }} </a>
+                        </h3>
+                        <h6 class="publish-date mb-4"> <i class="fal fa-calendar-day"></i> {{ post.created|date:"M d, Y" }}</h6>
+
+                        <p class="card-text ">{{ post.body|truncatewords:50|linebreaks }}</p>
+                        <a href="{% url 'post_detail' post.id %}" class="card-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>          <!--row end-->
+    </div>          <!-- all blog end-->
+
+ {% endblock %}

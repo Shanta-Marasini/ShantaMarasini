@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title%} Github projects {% endblock %}
+
+{% block main %}
+
+<div class="card mb-3" >
+    <div class="card-body">
+        <h3 class="card-title"> Life as a Coder </h3>
+        <h6 class="card-subtitle mb-4 text-muted"> Nothing can bother me as much as errors do.</h6>
+        <p class="card-text">
+                        I have been working on web designing (HTML, CSS, JavaScript) since 2 years and python (Django) since last year.
+                        I have built some simple, basic projects, but do not have any professional experience.
+                        I have some basic knowledge of databases and Github.
+                        I aspire to focus on database and backend development.
+                        I regularly push my code to github.
+        </p>
+        <p> Here is the list of my Github repositories:</p>
+    </div>
+</div>
+
+<div class="row">
+    {% for project in projects %}
+    <div class="col-lg-6">
+        <div class="card">
+            {% load static %}
+  <img class="card-img-top" src="{{ project.thumb.url }}" alt="Card image cap">
+  <div class="card-body">
+    <h3 class="card-title">{{ project.title }}</h3>
+    <p class="card-text">{{ project.body }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+
+    <li class="list-group-item ">
+        <a href="#" class="common-link"> Github Link: {{ project.gitlink }}</a>
+    </li>
+    <li class="list-group-item ">
+        <a href="#" class="common-link"> Project Link: {{ project.hostedlink }}</a>
+    </li>
+  </ul>
+
+</div>
+
+
+    </div>
+    {% endfor %}
+</div>
+
+
+    <div id="repo-list-ul">
+
+            <!-- li is added dynamically -->
+    </div>
+
+
+{% endblock%}

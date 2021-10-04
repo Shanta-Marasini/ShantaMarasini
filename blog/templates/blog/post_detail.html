@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title%} blog_detail {% endblock %}
+
+{% block main %}
+
+<div class="card">
+ <div class="card-body">
+  <h3 class="card-title">
+   {{ post.title }}
+  </h3>
+  <h6 class="publish-date mb-4"> <i class="fal fa-calendar-day"></i> {{ post.created|date:"M d, Y" }}</h6>
+  <pre class="card-text">{{ post.body }}</pre>
+ </div>
+</div>
+
+{% endblock %}

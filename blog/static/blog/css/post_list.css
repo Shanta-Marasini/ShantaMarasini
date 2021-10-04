@@ -1,0 +1,12 @@
+.card-title-link{
+    color: #400061;
+}
+.card-title-link:hover{
+    color: #400061;
+    text-decoration: none;
+    color: #CC75F5;
+}
+.publish-date{
+    text-align: right;
+}
+

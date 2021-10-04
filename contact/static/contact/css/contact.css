@@ -1,0 +1,28 @@
+.form-container{
+    border: 1px solid #9cafbf;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #C04FF5;
+    padding: 20px;
+}
+.contact{
+    color:#400061;
+}
+label{
+    display: block;
+    padding: 10px 0 !important;
+}
+
+input[type=text],
+     input[type=email],
+     textarea
+        {
+            border: 1px solid #c5d7e8;
+            background-color: white !important;
+            padding:10px;
+            border-radius:5px;
+            width:80%;
+            font-size: 18px;
+            box-shadow: 0px 0px 3px #C04FF5;
+
+        }
+

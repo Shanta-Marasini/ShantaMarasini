@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+          crossorigin="anonymous"/>
+
+<!--    google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Patrick+Hand&display=swap"
+          rel="stylesheet">
+
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+
+    {% load static %}
+    <link href="{% static 'css/style.css' %}?{% now 'U' %}" rel="stylesheet">
+    <link href="{% static 'css/about.css' %}?{% now 'U' %}" rel="stylesheet">
+    <link href="{% static 'blog/css/post_list.css' %}?{% now 'U' %}" rel="stylesheet">
+    <link href="{% static 'github/css/github.css' %}?{% now 'U' %}" rel="stylesheet">
+    <link href="{% static 'contact/css/contact.css' %}?{% now 'U' %}" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg custom-nav">
+            <a class="navbar-brand" href="{% url 'about' %}">Shanta Marasini</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"> <i class="fas fa-bars"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse next-nav" id="navbarSupportedContent">
+
+                <div ><a href="{% url 'about' %}" class="header-links"> About </a></div>
+                <div ><a href="{% url 'posts' %}" class="header-links"> Blogs </a></div>
+                <div ><a href="{% url 'github' %}" class="header-links"> Github </a></div>
+                <div ><a href="{% url 'contact' %}" class="header-links"> Contact </a></div>
+            </div>
+        </nav>
+
+
+    <div class="main-wrapper">
+        {% block main %}
+        {% endblock %}
+    </div>
+
+    <footer>
+    <div class="footer-up">
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="ul-footer-link">
+                <li>
+                    <a href="{% url 'about' %}" class="footer-link">About</a>
+                </li>
+                <li>
+                    <a href="{% url 'posts' %}" class="footer-link">Blogs</a>
+                </li>
+                <li>
+                    <a href="{% url 'github' %}" class="footer-link">Github</a>
+                </li>
+                <li>
+                    <a href="{% url 'contact' %}" class="footer-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <p class="saying"> <i class="fas fa-code"></i>
+                Sometimes life is all about coding, that time I am an
+                exception with no handling.
+
+            <p class="saying"> <i class="fas fa-code"></i>
+                What is coding: Playing the game of hide-and-seek with errors.
+
+            </p>
+
+        </div>
+    </div>
+    </div>
+        <div class="copyright">   copyright <i class="far fa-copyright"></i> Shanta Marasini</div>
+    </footer>
+    </div>
+
+
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <script>
+        var image= "{% static 'media/giticon.png' %}"
+    </script>
+</body>
+</html>
